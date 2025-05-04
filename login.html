@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crypto Login</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="left" style="color: rgb(197, 207, 207);">
+      <h2>Hello! Welcome to the CryptoX Trading Platform</h2>
+      <p>Don't have an account yet?</p>
+      <br />
+      <button onclick="openSignupModal()">Sign Up</button>
+    </div>
+    <div class="right">
+      <h2>Sign In</h2>
+      <div class="input-box">
+        <input type="text" placeholder="Login or email" id="email" />
+      </div>
+      <div class="input-box">
+        <input type="password" placeholder="Password (min 6 characters)" id="password" />
+      </div>
+      <div class="captcha">
+        ✅ Click to verify (mock captcha)
+      </div>
+      <div class="terms">
+        By clicking "Sign In", you agree to our <a href="#" style="color:#00c3ff">Terms of Use</a>.
+      </div>
+      <button onclick="handleLogin()">Sign In</button>
+    </div>
+  </div>
+    <!-- Sign Up Modal -->
+
+<div id="signup-modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeSignupModal()">&times;</span>
+    <h2>Create Account</h2>
+    <input type="text" placeholder="Full Name" id="signup-name" />
+    <input type="email" placeholder="Email" id="signup-email" />
+    <input type="password" placeholder="Password" id="signup-password" />
+    <div style="margin-top: 1rem;">
+      <button onclick="handleSignup()">Sign Up</button>
+      <button onclick="closeSignupModal()" style="background-color: #d24242; color: black; margin-left: 10px;">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+  <script src="login.js"></script>
+</body>
+</html>

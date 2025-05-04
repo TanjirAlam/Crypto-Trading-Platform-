@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+   <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <img src="https://i.pravatar.cc/40" alt="User Avatar">
+      <strong>User Name</strong>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Logout</a>
+    </div>
+  </nav>
+
+  <!-- Profile Section -->
+  <section id="profile" class="profile-section">
+    <h2>Your Profile</h2>
+    <div class="profile-card">
+      <img src="https://i.pravatar.cc/100" alt="User Avatar" class="profile-avatar" />
+      <div class="profile-details">
+        <h3 id="user-name">Your Name</h3>
+        <p>Email: <span id="user-email">jane@example.com</span></p>
+        <p>Wallet Balance: <strong>$12,300</strong></p>
+        <p>Portfolio Value: <strong>$18,700</strong></p>
+        <button id="edit-profile-btn">Edit Profile</button>
+        <button id="start-trading">Start Trading</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Edit Modal -->
+  <div class="modal" id="edit-modal">
+    <div class="modal-content">
+      <h3>Edit Profile</h3>
+      <label for="name">Name:</label>
+      <input type="text" id="edit-name" />
+      <label for="email">Email:</label>
+      <input type="email" id="edit-email" />
+      <button id="save-profile">Save</button>
+      <button id="close-modal">Cancel</button>
+    </div>
+  </div>
+
+  <section id="wallet" class="wallet-section">
+    <h2 style="align-items: center;">Wallet Overview</h2>
+    <p style="align-items: center;">Available Balance: <strong>$12,300</strong></p>
+    <h3 style="align-items: center;">Transaction History</h3>
+    <table class="transaction-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Type</th>
+          <th>Crypto</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="transaction-history">
+        <!-- Transaction rows will be injected here -->
+      </tbody>
+    </table>
+  </section>
+  
+  <section id="portfolio-performance" class="portfolio-section">
+    <h2 style="color: white;">Portfolio Performance</h2>
+    <canvas id="performanceChart" width="600" height="300"></canvas>
+  </section>
+  
+
+  <script src="my.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+/* Base Styles */
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(160, 188, 238); */
+    background-color: #011446;
+    
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  /* Header and Footer */
+  header, footer {
+    padding: 1rem;
+    background-color: #20232a;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Navigation */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  #toggle-theme{
+    width: 80px;
+    height: 35px;
+    background-color: rgb(11, 98, 130);
+    color: white;
+    border-radius: 12px;
+    border: 0.5px solid rgb(37, 36, 36);
+    cursor: pointer;
+  }
+  #logout-btn{
+    width: 80px;
+    height: 35px;
+    background-color: rgb(11, 98, 130);
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+    border: 0.5px solid rgb(37, 36, 36);
+    cursor: pointer;
+  }
+  #logout-btn p{
+    margin-top: 7px;
+  }
+  #logout-btn a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  /* .login-dropdown {
+    position: relative;
+  } */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color: #20232a;
+    color: #fff;
+  }
+  
+  .main-nav {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .main-nav a:hover {
+    color: #61dafb;
+  }
+  
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .bg-img{
+    height: 400px;
+    width: 97.5%;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+    background: #f9f9f9;
+    background-image: url(https://thumbs.dreamstime.com/b/illustration-featuring-high-resolution-stock-photography-bitcoin-logo-trading-chart-dark-blue-background-light-367028478.jpg);
+    background-size: auto;
+  }
+  
+  /* Main Layout */
+  main {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Sections */
+  section {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 6px;
+    background: #66A5AD;
+  }
+  #dashboard{
+    height: 400px;
+    background-image: url(https://media.assettype.com/analyticsinsight%2Fimport%2Fwp-content%2Fuploads%2F2023%2F04%2FScreenshot-2023-04-07-150041.png);
+  }
+  /* Dashboard Title */
+  #dashboard h2 {
+    color: rgb(210, 234, 240);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* Grid Layout for Crypto Cards */
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  /* Crypto Card Styles */
+  .crypto-card {
+    margin-top: 30px;
+    background-color: #568fde;
+    color: #000;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    border: 1px solid #ddd;
+  }
+  
+  .crypto-card:hover {
+    background-color: #19f5eef7;
+    transform: translateY(-5px);
+  }
+  
+  #trading-ui {
+    min-height: 400px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    background-size: auto;
+  }
+  
+  #trading-ui form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-width: 300px;
+  }
+  #trading-ui h2{
+    color: rgb(192, 248, 246);
+  }
+  #trading-ui select,
+  #trading-ui input,
+  #trading-ui button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .trade-btn {
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .trade-btn.buy {
+    background-color: rgb(220, 40, 40);
+  }
+  
+  .trade-btn.sell {
+    background-color: rgb(4, 143, 4);
+  }
+  
+  .trade-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Dark Mode */
+  .dark {
+    background-color: #121212;
+    color: white;
+  }
+  
+  .dark section {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+  
+  .dark .crypto-card {
+    background-color: #2e2e2e;
+    color: #fff;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 0.5rem;
+    }
+  }
+  #portfolio{
+    height: 1000px;
+    text-align: center;
+  }
+  #portfolio h2{
+    color: rgb(19, 16, 16);
+    margin-bottom: 20px;
+  }
+  .stats-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(to bottom, #fefefe, #ffffff);
+    font-family: Arial, sans-serif;
+    color: #0f1a3c;
+    flex-wrap: wrap;
+  }
+  
+  .stat-box {
+    flex: 1;
+    margin: 1rem;
+    min-width: 200px;
+  }
+  
+  .stat-box h5 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e2a50;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-box h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.3rem 0;
+  }
+  
+  .stat-box p {
+    font-size: 0.95rem;
+    color: #2e3b5e;
+  }
+  .about-text {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #1c1c2b;
+  }
+  
+  .about-text h3, .about-text h4 {
+    color: #0f1a3c;
+    margin-bottom: 1rem;
+  }
+  
+  .about-text ul {
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .about-text li {
+    margin-bottom: 0.7rem;
+  }
+  

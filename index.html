@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crypto Trading Platform</title>
+  <!-- <link rel="stylesheet" href="style.css" /> -->
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <header>
+    <h1>CryptoTradeX</h1>
+    
+    <nav class="main-nav">
+      <a href="profile.html">Profile</a>
+      <a href="#dashboard">Market</a>
+      <a href="#trading-ui">Trading</a>
+      <A href="dashboard.html">Coin</A>
+      <a href="#offer">Offers</a>
+      <a href="#about">About Us</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <button id="toggle-theme"><b>Dark Mode</b></button>
+      <div class="login-dropdown">
+        <div id="logout-btn"><p><B><A href="login.html">Log out</A></B></p></div>
+      </div>
+    </div>
+  </header>
+  
+  
+  <main>
+    <section class="bg-img">
+        <div class="image"></div>
+    </section>
+    <section id="dashboard">
+        <h2>Live Market Data</h2>
+        <div id="crypto-list" class="grid">
+          <div class="crypto-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiFpjxAR28PWfNYx8IsrapO8WMg0iG61GXyg&s" alt="Bitcoin" width="32" />
+            <h3>Bitcoin (BTC)</h3>
+            <br>
+            <p>Price: $63,000</p>
+            <p>Change: +2.5%</p>
+          </div>
+      
+          <div class="crypto-card">
+            <img src="https://www.cdnlogo.com/logos/e/81/ethereum-eth.svg" alt="Ethereum" width="32" />
+            <h3>Ethereum (ETH)</h3>
+            <br>
+            <p>Price: $3,100</p>
+            <p>Change: +1.7%</p>
+          </div>
+      
+          <div class="crypto-card">
+            <img src="https://www.coinpass.com/media/images/MR-4735-Coinpass-.format-webp.webpquality-90.height-752_AoZ86kL.webp" alt="Cardano" width="35" />
+            <h3>Cardano (ADA)</h3>
+            <br>
+            <p>Price: $0.39</p>
+            <p>Change: +3.2%</p>
+          </div>
+      
+          <div class="crypto-card">
+            <img src="https://cdn.create.vista.com/api/media/small/729590466/stock-photo-image-solana-sol-virtual-currency-digital-background-illustration" alt="Solana" width="32" />
+            <h3>Solana (SOL)</h3>
+            <br>
+            <p>Price: $150</p>
+            <p>Change: +4.1%</p>
+          </div>
+        </div>
+      </section>
+    
+    <section id="trading-ui" style="background-image: url('https://www.usnews.com/object/image/0000018c-f9c9-df63-abed-fbfdc4120000/https-media-gettyimages-com-id-1322222880-photo-bitcoin-formed-by-binaries.jpg?update-time=1704997820551&size=responsive640'); background-size: cover; background-position: center; padding: 2rem; text-align: center; max-height: 80vh;">
+      <h2 style="color: white;">Trading</h2>
+      
+      <form id="trade-form" onsubmit="return false">
+        <select id="crypto-select">
+          <option value="Bitcoin">Bitcoin</option>
+          <option value="Ethereum">Ethereum</option>
+          <option value="Cardano">Cardano</option>
+          <option value="Solana">Solana</option>
+        </select>
+        <input type="number" id="amount" placeholder="Amount" required />
+        <button type="button" id="buy-btn" class="trade-btn buy">Buy</button>
+        <button type="button" id="sell-btn" class="trade-btn sell">Sell</button>
+      </form>
+    
+      <!-- View Orders -->
+      <div style="margin-top: 2rem;">
+        <button onclick="toggleOrders('open')" style="background-color: rgb(35, 185, 115);">View Open Orders</button>
+        <button onclick="toggleOrders('closed')" style="background-color: rgb(123, 85, 10);">View Closed Orders</button>
+      </div>
+    
+      <div id="open-orders" class="orders-list" style="display: none; color: white; margin-top: 1rem;">
+        <h3>Open Orders</h3>
+        <ul id="open-orders-list"></ul>
+      </div>
+    
+      <div id="closed-orders" class="orders-list" style="display: none; color: white; margin-top: 1rem;">
+        <h3>Closed Orders</h3>
+        <ul id="closed-orders-list"></ul>
+      </div>
+    </section>
+    
+
+    <section id="portfolio">
+      <h2>About</h2>
+      <div class="about">
+        <section class="stats-section">
+          <div class="stat-box">
+            <h5>TRUST OF</h5>
+            <h2>1 Cr+</h2>
+            <p>REGISTERED USERS</p>
+          </div>
+          <div class="stat-box">
+            <h5>HOME TO</h5>
+            <h2>100+</h2>
+            <p>CRYPTO ASSETS</p>
+          </div>
+          <div class="stat-box">
+            <h5>QUARTERLY</h5>
+            <h2>9.6 Cr+</h2>
+            <p>TRADING VOLUME</p>
+          </div>
+        </section>
+    
+        <div class="about-text">
+          <h3>CryptoTradeX – Buy Bitcoin and other Cryptos at India's largest crypto exchange</h3>
+          <p>
+            CryptoTradeX is India's most trusted crypto app. We aim to make money equal for all. Our journey began in 2017 with just a handful of employees. Fast forward to 2024, we have over 450 employees and over 20 million+ users. CryptoTradeX is backed by some of the globally renowned investors among the likes of A16z, Tiger Global, and Sequoia Capital India. The cornerstones of our culture are customer obsession and an employee-first approach. We aim to democratize investments for everyone — making them simple, safe, and accessible to every Indian.
+          </p>
+    
+          <h4>Why choose CryptoTradeX?</h4>
+          <ul>
+            <li><strong>Crypto Trading:</strong> We provide a user-friendly platform where traders and investors can buy, sell, and exchange a variety of cryptos.</li>
+            <li><strong>Exchange Aggregator:</strong> We offer real-time prices and liquidity from other crypto exchanges, enabling users like you to compare rates and choose the most favorable ones for trading.</li>
+            <li><strong>Wide Range of Supported Cryptos:</strong> We support numerous cryptos, including popular favorites like Bitcoin, Ethereum, Ripple, Litecoin, and other altcoins.</li>
+            <li><strong>Secure Transactions:</strong> Your security is our priority. CryptoTradeX safeguards users' funds and employs encryption protocols to secure personal information and transaction details.</li>
+            <li><strong>Ease of Use:</strong> CryptoTradeX is one of the best apps for crypto trading and aims to provide a simple and intuitive interface for beginners and experienced crypto traders.</li>
+          </ul>
+    
+          <h4>Explore the CryptoTradeX – Crypto App on Android & iOS</h4>
+          <p>
+            Download the Android app from the Google Play Store or the Apple App Store to enjoy various benefits. CryptoTradeX is one of the best crypto exchanges in India and a popular crypto exchange aggregator platform. It allows users to compare and trade cryptos across various exchanges in a single place, making it easier to find the best rates for your trades.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- <section id="auth">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+    </section> -->
+  </main>
+
+  <footer>
+    <p>&copy; • 2025 CryptoTradeX 
+      •
+
+Terms & Conditions
+
+•
+
+Privacy Policy    
+      •
+      
+      Trading Policy</p>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

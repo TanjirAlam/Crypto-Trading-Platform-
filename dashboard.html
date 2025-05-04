@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crypto Dashboard</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+ <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div><strong>CryptoX</strong></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#dashboard">Market</a>
+      <a href="index.html#trading-ui">Trading</a>
+      <a href="#offers">Offers</a>
+    </div>
+  </nav>
+
+  <div class="dashboard">
+    <h2>Live Coin Performance</h2>
+    <div class="coin-select">
+        <label for="coin">Select Coin: </label>
+        <select id="coin">
+          <option value="bitcoin">Bitcoin</option>
+          <option value="ethereum">Ethereum</option>
+          <option value="cardano">Cardano (ADA)</option>
+          <option value="solana">Solana</option>
+        </select>
+        <button id="select-coin-btn">Select</button>
+      </div>      
+    <div class="card">
+      <canvas id="coinChart" height="100"></canvas>
+    </div>
+  </div>
+
+  <script src="graph.js"> </script>
+</body>
+</html>
